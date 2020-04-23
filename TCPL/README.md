@@ -300,6 +300,54 @@ int main(void)
 }
 ```
 
-1. 
+1. a word is any sequence of characters that does not contain a blank, tab or newline.  
+2. OR operator  
+
+### 18-ex-1-11.c  
+How would you test the word count program? What kinds of input are most likely to uncover bugs if there are any?   
+
+### 19-ex-1-12.c  
+Write a program that prints its input one word per line.  
+
+### 20.c  
+```
+#include <stdio.h>
+
+/* count digits, white space, others */
+
+int main(void)
+{
+  int c, i, nwhite, nother;
+  int ndigit[10];
+
+  nwhite = nother = 0;
+  for (i = 0; i < 10; ++i)
+    ndigit[i] = 0;
+
+  while ((c = getchar()) != EOF) {
+    if (c >= '0' && c <= '9')
+      ++ndigit[c-'0'];
+    else if (c == ' ' || c == '\n' || c == '\t')
+      ++nwhite;
+    else
+      ++nother;
+  }
+  printf("digits =");
+  for (i = 0; i < 10; ++i)
+    printf(" %d", ndigit[i]);
+  printf(", white space = %d, other = %d\n", nwhite, nother);
+}
+```
+
+1. This particular program relies on the properties of the character representation of the digits  
+2. array  
+3. else if   
+
+### 21-ex-1-13.c  
+Write a program to print a histogram of the lengths of words in its input. It is easy to draw the histogram with the bars horizontal; a vertical orientation is more challenging.  
+
+### 22-ex-1-14.c  
+Write a program to print a histogram of the frequencies of different characters in its input.  
+
 
 
