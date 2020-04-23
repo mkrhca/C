@@ -4,7 +4,7 @@
 
 1.c   
 <pre>
-#include <stdio.h>
+#include \<stdio.h\>
 
 int main()
 {
