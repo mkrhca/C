@@ -3,14 +3,14 @@
 ## Chapter 1 -  A Tutorial Introduction  
 
 1.c   
-<pre>
-#include \<stdio.h\>
+```
+#include <stdio.h\>
 
 int main()
 {
   printf("Hello, World!\n");
 }
-</pre>  
+```
 
 1. ".c" extension  
 2. functions and variables  
