@@ -2,7 +2,7 @@
 
 ## Chapter 1 -  A Tutorial Introduction  
 
-1.c   
+### 1.c   
 ```
 #include <stdio.h>
 
@@ -20,7 +20,7 @@ int main()
 6. character string or string constant  
 7. escape sequence - \n, \t, \\", \\\  
 
-2.c 
+### 2.c 
 ```
 #include <stdio.h>
 
@@ -55,7 +55,7 @@ int main()
 7. multiplying by 5 and dividing by 9 - integer division truncates  
 8. printf format specifiers  
 
-2-1.c 
+### 2-1.c 
 ```
 #include <stdio.h>
 
