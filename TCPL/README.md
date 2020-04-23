@@ -83,6 +83,12 @@ int main()
 
 1. adding width in printf  
 
+### 3-ex-1-3.c  
+Modify the temperature conversion program to print a heading above the table.  
+
+### 4-ex-1-4.c  
+Write a program to print the corresponding Celsius to Fahrenheit table.  
+
 ### 5.c  
 ```
 #include <stdio.h>
@@ -101,6 +107,9 @@ int main(void)
 
 1. for statement  
 2. %6.1f in printf  
+
+### 6-ex-1-5.c  
+Modify the temperature conversion program to print the table in reverse order, that is, from 300 degrees to 0.  
 
 ### 7.c  
 ```
@@ -174,6 +183,12 @@ int main(void)
 2. The while gets a character, assigns it to c, and then tests whether the character was the endof-file signal  
 3. The parentheses around the assignment, within the condition are necessary for handling precedence  
 
+### 9-ex-1-6.c  
+Verify that the expression getchar() != EOF is 0 or 1.  
+
+### 10-ex-1-7.c  
+Write a program to print the value of EOF.  
+
 ### 11.c  
 ```
 #include <stdio.h>
@@ -243,6 +258,17 @@ int main(void)
 2. the == sign  
 3. A character written between single quotes represents an integer value equal to the numerical value of the character in the machine's character set. This is called character constant  
 4. Example: 'A' is a character constant and its ASCII character set value is 65  
+
+### 14-ex-1-8.c  
+Write a program to count blanks, tabs, and newlines.  
+
+### 15-ex-1-9.c  
+Write a program to copy its input to its output, replacing each string of one or more blanks by a single blank.  
+
+### 16-ex-1-10.c  
+Write a program to copy its input to its output, replacing each tab by \t, each  
+backspace by \b, and each backslash by \\. This makes tabs and backspaces visible in an  
+unambiguous way.  
 
 ### 17.c  
 ```
