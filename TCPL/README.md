@@ -383,6 +383,107 @@ int power(int base, int n){
 ### 24-ex-1-15.c  
 Rewrite the temperature conversion program to use a function for conversion.  
 
+### 25.c  
+```
+#include <stdio.h>
+
+int power(int m, int n);
+/* Example for Arguments - Call by Value */
+
+int main(void)
+{
+  int i;
+
+  for (i=0; i < 10; i++)
+    printf("%d %d %d\n", i, power(2,i), power(-3,i));
+  return 0;
+}
+
+/* power: raise base to the n-th power; n >= 0 */
+int power(int base, int n){
+  int p;
+
+  for (p = 1; n > 0; --n)
+    p = p * base;
+
+  return p;
+}
+```
+
+1. In C, all function arguments are passed "by value".  
+2. This is not the same when array  is passed as argument.  
+
+### 26.c  
+```
+#include <stdio.h>
+#define MAXLINE 1000 /* maximum inout line length */
+
+int getline(char line[], int maxline);
+void copy(char to[], char from[]);
+
+/* print the longest input line */
+int main()
+{
+  int len;               /* current line length */
+  int max;               /* maximum length seen so far */
+  char line[MAXLINE];    /* current input line */
+  char longest[MAXLINE]; /* longest line saved here */
+
+  max = 0;
+  while ((len = getline(line, MAXLINE)) > 0) {
+    if (len > max) {
+      max = len;
+      copy(longest, line);
+    }
+  }
+
+  if (max > 0)  /* there was a line */
+    printf("%s", longest);
+  return 0;
+}
+
+/* getline: read a line into s, return lenght */
+int getline(char s[], int lim)
+{
+  int c, i;
+  for (i=0; i < lim-1 && (c=getchar()) != EOF && c != '\n'; ++i)
+    s[i] = c;
+
+  if (c == '\n') {
+    s[i] = c;
+    ++i;
+  }
+
+  s[i] = '\0';
+  return i;
+}
+
+/* copy: copy 'from' into 'to'; assume to is big enough */
+void copy(char to[], char from[])
+{
+  int i;
+
+  i = 0;
+  while ((to[i] = from[i]) != '\0')
+    ++i;
+}
+```
+
+1. 
+
+### 27-ex-1-16.c  
+Revise the main routine of the longest-line program so it will correctly print the length of arbitrary long input lines, and as much as possible of the text.  
+
+### 28-ex-1-17.c  
+Write a program to print all input lines that are longer than 80 characters.  
+
+### 29-ex-1-18.c  
+Write a program to remove trailing blanks and tabs from each line of input, and to delete entirely blank lines.  
+
+### 30-ex-1-19.c  
+Write a function reverse(s) that reverses the character string s. Use it to write a program that reverses its input a line at a time.  
+
+
 
 
 
