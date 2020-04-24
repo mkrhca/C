@@ -349,5 +349,40 @@ Write a program to print a histogram of the lengths of words in its input. It is
 ### 22-ex-1-14.c  
 Write a program to print a histogram of the frequencies of different characters in its input.  
 
+### 23.c 
+```
+#include <stdio.h>
+
+int power(int m, int n);
+/* function in C */ 
+
+int main(void) 
+{
+  int i;
+  
+  for (i=0; i < 10; i++)
+    printf("%d %d %d\n", i, power(2,i), power(-3,i));
+  return 0;
+}
+
+/* power: raise base to the n-th power; n >= 0 */
+int power(int base, int n){
+  int i, p;
+  
+  p = 1; 
+  for (i = 1; i <= n; i++) 
+    p = p * base;
+
+  return p;
+}
+```
+
+1. Function definitions can appear in any order, and in one source file or several, although no function can be split between files  
+2. declaring the function  
+
+### 24-ex-1-15.c  
+Rewrite the temperature conversion program to use a function for conversion.  
+
+
 
 
